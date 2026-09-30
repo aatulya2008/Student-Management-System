@@ -1,0 +1,28 @@
+from student import student_manage
+from attendance_management import attendance_manage
+from marks_management import mark_manage
+data={}
+# Main view
+def main():
+    while True:
+        print("\n--------MAIN MENU--------")
+        print("1. Student Management")
+        print("2. Marks Management")
+        print("3. Attendance Management")
+        print("4. Exit")
+        choose=input("Enter your choice from (1-4): ")
+
+        if choose=='1':
+            student_manage(data)
+        elif choose=='2':
+            mark_manage(data)
+        elif choose=='3':
+            attendance_manage(data)
+        elif choose=='4':
+            print("Program ended\n Thank you\n Have a good day!")
+            break
+        else:
+            print("invalid choice! choose from 1-4")
+
+if __name__=="__main__":
+    main()
